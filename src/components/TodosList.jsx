@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { data } from '../staticData/buttonData';
@@ -14,14 +14,17 @@ const TodosList = ({ todos, setTodos, editTodo, setEditTodo, isEdit, setIsEdit, 
   };
 
 
-  let filteredTodos = todos;
-
-    if (filter === 'Completed') {
-      filteredTodos = todos.filter(todo => todo.completed);
+  const filterTodos = () => {
+    if (filter === 'All') {
+      return todos;
+    } else if (filter === 'Completed') {
+      return todos.filter((todo) => todo.completed);
     } else if (filter === 'Incomplete') {
-      filteredTodos = todos.filter(todo => !todo.completed);
+      return todos.filter((todo) => !todo.completed);
     }
+  };
 
+  const filteredTodos = filterTodos();
 
 
   const handleComplete = (id) => {
