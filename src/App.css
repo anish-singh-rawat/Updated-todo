@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  width: 150px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+.form-input-field{
+  border : 1px solid black !important;
+}
+.parent {
+  width: 100%;
+  height: 650px;
+  background-color: #082fbd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.child {
+  width: 50%;
+  overflow: auto;
+  margin: auto;
+  align-items: center;
+  border-radius: 35px;
+  padding-bottom: 40px;
+}
+
+.main-heading {
+  color: white;
+  text-align: center;
+  margin: 10px;
+  font-size: 35px;
+}
+
+.container {
+  width: 98%;
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  border-radius: 13px;
+
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.status-btn {
+  width: 150px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(2, 205, 232);
+  color: white;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 15px;
+  padding: 10px;
+  background-color: rgb(43, 5, 254) ;
+  color: white;
+  margin-left: 10px;
+  border: none;
+}
+
+.check-box {
+  float: left;
+  margin: 5px;
+}
+
+.done-msg {
+  float: right;
+  color: rgb(0, 0, 255);
+  text-align: center;
+  margin-left: 5px;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.status-btn:hover {
+  background-color: black;
+}
+
+.form-input-field {
+  border: 1px solid black !important;
+  width: 85%;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 5px;
+  margin: auto;
+  margin-left: 3%;
+
+}
+
+.todos-input-field {
+  border: 1px solid black !important;
+  width: 90%;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.list {
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-todo {
+  width: 85%;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 25px;
+  padding: 7px;
+  word-wrap: break-word;
+  display: flex;
+  border: 1px solid black !important;
+
+}
+
+.checkbox-text {
+  width: 88%;
+  display: flex;
+}
+
+.error-message {
+  color: red;
+}
+.todo-heading{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #082fbd;
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+  color: #fff;
+}
+@media(max-width:1100px) {
+  .list {
+    display: block;
+  }
+
+  .btn {
+    margin: 10px;
+  }
+
+  .single-todo {
+    width: 100%;
+  }
+
+
+  .todos-input-field {
+    width: 95%;
+  }
+}
+
+@media(max-width:700px) {
+  .main-heading {
+    font-size: 15px;
+  }
+
+  .btn {
+    margin-bottom: 0px;
+  }
+
+  .status {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .status-btn {
+    width: 90%;
+    display: block;
+    margin: 5px;
+  }
+  .active{
+    width: 90%;
+    display: block;
+    margin: 5px;
+  }
+}
+
+@media(max-width:550px) {
+  .child {
+    width: 80%;
+  }
+}
