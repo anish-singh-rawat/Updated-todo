@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPenSquare,  
+  faPenSquare,
   faTrash,
   faCheck,
-  faTimes, 
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { data } from "../staticData/buttonData";
 
@@ -20,8 +20,8 @@ const TodosList = ({
 }) => {
   const [editedText, setEditedText] = useState("");
   const [filter, setFilter] = useState("All");
-  const [active, setActive] = useState(null);
-  const [filteredTodos, setFilteredTodos] = useState([]);  
+  const [active, setActive] = useState(data[0].id);
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
   const handleFilter = (id, name) => {
     setFilter(name);
@@ -38,8 +38,7 @@ const TodosList = ({
         return todos.filter((todo) => !todo.completed);
       }
     };
-
-    setFilteredTodos(filterTodos()); 
+    setFilteredTodos(filterTodos());
   }, [filter, todos]);
 
   const handleComplete = (id) => {
@@ -116,7 +115,7 @@ const TodosList = ({
                   todo.title
                 )}
               </div>
-              {todo.completed === true ? (  
+              {todo.completed === true ? (
                 <div className="done-msg">Completed</div>
               ) : (
                 ""
