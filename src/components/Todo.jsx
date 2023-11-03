@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect, useState } from 'react'
 import Form from './Form'
 import TodosList from './TodosList';
@@ -14,7 +17,7 @@ const getLocalItems =()=>{
 }
 
 const Todo = () => {
-    const [input,setInput] = useState('');              
+    const [inputData,setInputData] = useState('');              
   const [todos,setTodos] = useState(getLocalItems());   
   const [editTodo,setEditTodo] =useState(null);         
   const [isEdit,setIsEdit] = useState(false);        
@@ -31,8 +34,8 @@ const Todo = () => {
       <div className='child'>
         <div className='container'>
         <Form 
-          input = {input} 
-          setInput = {setInput} 
+          inputData = {inputData} 
+          setInputData = {setInputData} 
           todos = {todos} 
           setTodos = {setTodos} 
           editTodo={editTodo} 
@@ -46,7 +49,7 @@ const Todo = () => {
           setTodos={setTodos} 
           editTodo={editTodo}
           setEditTodo={setEditTodo} 
-          setInput={setInput}
+          setInputData={setInputData}
           isEdit={isEdit}
           setIsEdit={setIsEdit}
           errorMessage={errorMessage}
@@ -61,3 +64,6 @@ const Todo = () => {
 }
 
 export default Todo
+
+
+
